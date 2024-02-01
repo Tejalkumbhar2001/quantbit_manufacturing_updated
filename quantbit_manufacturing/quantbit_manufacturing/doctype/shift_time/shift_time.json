@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:name_of_shift",
+ "creation": "2024-02-01 11:33:32.255507",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "compnay",
+  "name_of_shift",
+  "hours",
+  "minutes",
+  "shift"
+ ],
+ "fields": [
+  {
+   "fieldname": "compnay",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Compnay",
+   "options": "Company"
+  },
+  {
+   "fieldname": "name_of_shift",
+   "fieldtype": "Data",
+   "label": " Name Of Shift",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "hours",
+   "fieldtype": "Int",
+   "label": "Hours"
+  },
+  {
+   "fieldname": "minutes",
+   "fieldtype": "Int",
+   "label": "Minutes"
+  },
+  {
+   "fieldname": "shift",
+   "fieldtype": "Select",
+   "label": "Shift",
+   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-01 11:34:10.922293",
+ "modified_by": "Administrator",
+ "module": "Quantbit Manufacturing",
+ "name": "Shift Time",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

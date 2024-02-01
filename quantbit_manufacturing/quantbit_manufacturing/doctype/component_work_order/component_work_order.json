@@ -1,0 +1,320 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-24 16:28:16.406173",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "column_break_qpyyh",
+  "date",
+  "section_break_qi9gz",
+  "supervisor",
+  "operator",
+  "column_break_bqoz9",
+  "supervisor_name",
+  "operator_name",
+  "column_break_s66ik",
+  "shift_time",
+  "posting_date",
+  "section_break_x63ky",
+  "naming_series",
+  "column_break_myp5e",
+  "section_break_ujtiw",
+  "finished_item_code",
+  "column_break_t1pxc",
+  "finished_item_name",
+  "column_break_rht6h",
+  "quantity_to_manufacturing",
+  "column_break_jwgah",
+  "updated_quantity_to_manufacturing",
+  "column_break_nlrgo",
+  "column_break_vfpkv",
+  "warehouse_details_section",
+  "source_warehouse",
+  "column_break_09srv",
+  "target_warehouse",
+  "component_raw_item_section",
+  "component_raw_item",
+  "raw_materials_section",
+  "component_finished_item",
+  "section_break_djo21",
+  "operational_cost",
+  "column_break_gzte0",
+  "process_loss",
+  "amended_from",
+  "rate_for_updated_quantity",
+  "rate_of_quantity",
+  "component_manifest"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_bqoz9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qpyyh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "section_break_x63ky",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "CWO-.FY.-.###."
+  },
+  {
+   "fieldname": "section_break_ujtiw",
+   "fieldtype": "Section Break",
+   "label": "Finished Item Details"
+  },
+  {
+   "fieldname": "finished_item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Finished Item Code",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_t1pxc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "finished_item_code.item_name",
+   "fieldname": "finished_item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Finished Item Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "component_raw_item_section",
+   "fieldtype": "Section Break",
+   "label": "Component Raw Item"
+  },
+  {
+   "fieldname": "component_raw_item",
+   "fieldtype": "Table",
+   "options": "Component Raw Item"
+  },
+  {
+   "fieldname": "raw_materials_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Component Finished Item"
+  },
+  {
+   "fieldname": "component_finished_item",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "options": "Component Finished Item"
+  },
+  {
+   "fieldname": "section_break_djo21",
+   "fieldtype": "Section Break",
+   "label": "Operational Cost"
+  },
+  {
+   "fieldname": "column_break_gzte0",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "process_loss",
+   "fieldtype": "Float",
+   "label": "Process Loss %",
+   "precision": "2"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Component Work Order",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_myp5e",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_rht6h",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "quantity_to_manufacturing",
+   "fieldtype": "Float",
+   "label": "Quantity to Manufacturing",
+   "precision": "2"
+  },
+  {
+   "fieldname": "warehouse_details_section",
+   "fieldtype": "Section Break",
+   "label": "Warehouse Details"
+  },
+  {
+   "fieldname": "source_warehouse",
+   "fieldtype": "Link",
+   "label": "Source Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "column_break_09srv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "target_warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Target Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_nlrgo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rate_of_quantity",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Rate of Quantity",
+   "precision": "2"
+  },
+  {
+   "fieldname": "updated_quantity_to_manufacturing",
+   "fieldtype": "Float",
+   "label": "Updated Quantity to Manufacturing",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rate_for_updated_quantity",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Rate for Updated Quantity",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_jwgah",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_vfpkv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "component_manifest",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Component Manifest",
+   "options": "Component Manifest"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "operational_cost",
+   "fieldtype": "Table",
+   "options": "Additional Cost for Work Order"
+  },
+  {
+   "fetch_from": "supervisor_id.employee_name",
+   "fieldname": "supervisor_name",
+   "fieldtype": "Data",
+   "label": "Supervisor Name"
+  },
+  {
+   "fetch_from": "operator_id.employee_name",
+   "fieldname": "operator_name",
+   "fieldtype": "Data",
+   "label": "Operator Name"
+  },
+  {
+   "fieldname": "shift_time",
+   "fieldtype": "Link",
+   "label": "Shift Time",
+   "options": "Shift Time"
+  },
+  {
+   "fieldname": "section_break_qi9gz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_s66ik",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "operator",
+   "fieldtype": "Link",
+   "label": "Operator ID",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "supervisor",
+   "fieldtype": "Link",
+   "label": "Supervisor ID",
+   "options": "Employee",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Stock Entry",
+   "link_fieldname": "custom_component_work_order"
+  }
+ ],
+ "modified": "2024-02-01 12:05:51.188707",
+ "modified_by": "Administrator",
+ "module": "Quantbit Manufacturing",
+ "name": "Component Work Order",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
